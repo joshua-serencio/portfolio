@@ -1,0 +1,336 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url('fonts/Cinzel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('fonts/Cinzel-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background-color: #f7fcff;
+}
+
+#myVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: actual-size;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+a.front-button {
+    color: black;
+    text-decoration: none;
+    background:linear-gradient(to right, #BF953F, #AA771C);
+    padding: 10px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+}
+
+.btn-transition {
+    transition:0.5s;
+}
+
+.btn-transition:hover {
+    transform:scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0; /* Start with fully transparent */
+    }
+    to {
+      opacity: 1; /* End with fully opaque */
+    }
+}
+  
+.fade-in-on-load {
+    animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
+    /* forwards ensures the element stays at its final state */
+}
+
+.header-container {
+    background-color: yellowgreen;
+    padding: 16px 5%;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    padding: 16px 5%;
+}
+
+/* Header menu grid */
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+  }
+  
+@media screen and (max-width: 992px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+img.oj-logo {
+    width: 18%;
+}
+
+a.img-logo {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+/* @media (min-width: 1025px) and (max-width: 1280px) {
+    img.oj-logo {
+        width: 10%;
+        text-align: start;
+    }
+} */
+  
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    img.oj-logo {
+        width: 20%;
+        text-align: start;
+    }
+}
+  
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    img.oj-logo {
+        width: 20%;
+        text-align: start;
+    }
+}
+  
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+    img.oj-logo {
+        width: 30%;
+        text-align: start;
+    }
+}
+  
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+    img.oj-logo {
+        width: 30%;
+        text-align: start;
+    }
+}
+
+/*Content container*/
+.content-container {
+    padding: 100px 5%;
+}
+
+.flipbook-container {
+    padding: 100px 5%;
+    display: grid;
+    place-content: center;
+}
+
+.content-container h1 {
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+.content-container a {
+    text-decoration: none;
+    transition:0.5s;
+}
+
+.content-container a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+}
+
+.back-link {
+    padding: 25px 5%;
+}
+
+.back-link a{
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    transition:0.5s;
+}
+
+.back-link a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content-container {
+        padding: 75px 5%;
+    }
+    .flipbook-container {
+        padding: 75px 5%;
+    }
+}
+  
+@media screen and (max-width: 767px){
+    .content-container {
+        padding: 50px 5%;
+    }
+    .flipbook-container {
+        padding: 50px 5%;
+    }
+    .content-grid{
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+    }
+    div.content-container .catalogue-sq {
+        margin-top: 40px;
+    }
+}
+
+.grid-item {
+    background-color: #f7fcff;
+    padding: 20px;
+}
+
+img.square-img {
+    width: 100%;
+}
+
+
+/*Hamburger Icon*/
+
+#menu__toggle {
+    opacity: 0;
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+  }
+  
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 5%;
+    right: 20px;
+  
+    width: 26px;
+    height: 26px;
+  
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+  
+    width: 100%;
+    height: 2px;
+  
+    background-color: #616161;
+  
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+  
+    width: 100%;
+    height: 100%;
+  
+    margin: 0;
+    padding: 35vh 0;
+  
+    list-style: none;
+  
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  
+    transition-duration: .25s;
+  }
+  
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+  
+    color: #333;
+  
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  
+    text-decoration: none;
+  
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
