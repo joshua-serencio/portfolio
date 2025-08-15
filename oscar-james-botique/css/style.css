@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Cinzel';
-    src: url('fonts/Cinzel-Regular.ttf') format('truetype');
+    src: url('https://joshua-serencio.github.io/portfolio/oscar-james-botique/fonts/Cinzel-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cinzel';
-    src: url('fonts/Cinzel-Bold.ttf') format('truetype');
+    src: url('https://joshua-serencio.github.io/portfolio/oscar-james-botique/fonts/Cinzel-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
